@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ru.beykerykt</groupId>
+	<artifactId>lightapi</artifactId>
+	<version>3.0</version>
+	<name>LightAPI</name>
+  
+  	<scm>
+    	<connection>scm:git:git://github.com/BeYkeRYkt/LightAPI.git</connection>
+    	<developerConnection>scm:git:git@github.com:BeYkeRYkt/LightAPI.git</developerConnection>
+    	<url>https://github.com/BeYkeRYkt/LightAPI</url>
+    	<tag>3.0</tag>
+  	</scm>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>LICENSE</url>
+		</license>
+	</licenses>
+  
+  	<distributionManagement>
+    	<repository>
+      		<id>maven.elmakers.com</id>
+      		<url>http://maven.elmakers.com/repository/</url>
+    	</repository>
+    	<snapshotRepository>
+      		<id>maven.elmakers.com</id>
+      		<url>http://maven.elmakers.com/repository/</url>
+    	</snapshotRepository>
+  	</distributionManagement>
+	
+	<properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.bukkit</groupId>
+			<artifactId>bukkit</artifactId>
+			<version>1.6.4-R2.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.md-5</groupId>
+			<artifactId>bungeecord-api</artifactId>
+			<version>1.7-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+            <id>bukkit-repo</id>
+            <url>http://repo.bukkit.org/content/groups/public/</url>
+		</repository>
+		<repository>
+            <id>elMakers</id>
+            <url>http://maven.elmakers.com/repository/</url>
+		</repository>
+		<repository>
+			<id>Bungee</id>
+			<url>https://oss.sonatype.org/content/groups/public/</url>
+		</repository>
+    </repositories>
+	<build>
+		<resources>
+		    <resource>
+		        <directory>src/main/resources/</directory>
+		        <filtering>true</filtering>
+		    </resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
