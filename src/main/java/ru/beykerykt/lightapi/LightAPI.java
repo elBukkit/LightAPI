@@ -29,6 +29,9 @@ import org.bukkit.World;
 import org.bukkit.command.CommandSender;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
+import ru.beykerykt.lightapi.chunks.ChunkInfo;
+
+import java.util.List;
 
 public class LightAPI extends JavaPlugin implements Listener {
 
@@ -69,6 +72,14 @@ public class LightAPI extends JavaPlugin implements Listener {
 	}
 
 	public static boolean deleteLight(final World world, final int x, final int y, final int z, boolean async) {
+		return false;
+	}
+	
+	public static List<ChunkInfo> collectChunks(Location location) {
+		return null;
+	}
+	
+	public static boolean updateChunk(ChunkInfo info) {
 		return false;
 	}
 }
